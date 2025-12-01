@@ -307,6 +307,45 @@ window.addEventListener('load', () => {
               }
           });
       });
+    }
+    // 8. Cookie Popup Logic
+  const cookiePopup = document.getElementById('cookie-popup');
+  const acceptBtn = document.getElementById('cookie-accept');
+  const declineBtn = document.getElementById('cookie-decline');
+
+  // Проверка: был ли уже выбор?
+  const hasConsent = localStorage.getItem('cookieConsent');
+
+  if (!hasConsent && cookiePopup) {
+      // Показываем через 2 секунды
+      setTimeout(() => {
+          cookiePopup.classList.add('show');
+      }, 2000);
+  }
+
+  if (acceptBtn && cookiePopup) {
+      acceptBtn.addEventListener('click', () => {
+          localStorage.setItem('cookieConsent', 'true'); // Запоминаем "Да"
+          
+          // Анимация исчезновения
+          cookiePopup.style.opacity = '0';
+          cookiePopup.style.transform = 'translateY(10px)';
+          setTimeout(() => {
+              cookiePopup.classList.remove('show');
+          }, 400);
+      });
+  }
+
+  if (declineBtn && cookiePopup) {
+      declineBtn.addEventListener('click', () => {
+          localStorage.setItem('cookieConsent', 'false'); // Запоминаем "Нет"
+          
+          cookiePopup.style.opacity = '0';
+          cookiePopup.style.transform = 'translateY(10px)';
+          setTimeout(() => {
+              cookiePopup.classList.remove('show');
+          }, 400);
+      });
   }
 
 });
