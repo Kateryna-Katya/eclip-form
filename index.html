@@ -1,34 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/test-two/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/test-two/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/test-two/assets/styles-guStct1H.css">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclip-Form | Разработка AI-ботов и ассистентов</title>
+    <meta name="description" content="Инновационные технологии для вашего бизнеса. Разработка чат-ботов и AI-ассистентов.">
+
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" crossorigin src="/eclip-form/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/eclip-form/assets/styles-D3EKcmHY.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
+  <div class="container header__container">
+      <a href="#" class="header__logo">
+          Eclip-Form
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+
+      <nav class="header__nav" id="nav-menu">
+          <ul class="header__list">
+              <li class="header__item"><a href="#hero" class="header__link">Главная</a></li>
+              <li class="header__item"><a href="#platform" class="header__link">Платформа</a></li>
+              <li class="header__item"><a href="#benefits" class="header__link">Преимущества</a></li>
+              <li class="header__item"><a href="#innovations" class="header__link">Инновации</a></li>
+              <li class="header__item"><a href="#blog" class="header__link">Блог</a></li>
+              <li class="header__item"><a href="#faq" class="header__link">Вопросы</a></li>
+          </ul>
+          <a href="#contact" class="header__cta mobile-only">Начать сейчас</a>
+      </nav>
+
+      <div class="header__actions">
+          <a href="#contact" class="header__cta desktop-only">Связаться</a>
+          <button class="header__burger" id="burger-btn" aria-label="Открыть меню">
+              <i data-lucide="menu"></i>
+          </button>
+      </div>
   </div>
 </header>
-
 
     <main>
       <!-- Loads the specified .html file -->
@@ -36,21 +50,66 @@
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+  <div class="container footer__container">
+      <div class="footer__col footer__col--brand">
+          <a href="#" class="footer__logo">Eclip-Form</a>
+          <p class="footer__desc">
+              Передовая цифровая инфраструктура для автоматизации вашего бизнеса. Технологии, которые работают на вас уже сегодня.
+          </p>
+          <div class="footer__socials">
+              <a href="#" aria-label="Telegram"><i data-lucide="send"></i></a>
+              <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+              <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+      </div>
+
+      <div class="footer__col">
+          <h3 class="footer__title">Навигация</h3>
+          <ul class="footer__links">
+              <li><a href="#platform">AI-Решения</a></li>
+              <li><a href="#blog">База знаний</a></li>
+              <li><a href="#innovations">Технологии</a></li>
+              <li><a href="#contact">Запросить доступ</a></li>
+          </ul>
+      </div>
+
+      <div class="footer__col">
+          <h3 class="footer__title">Правовая информация</h3>
+          <ul class="footer__links">
+              <li><a href="privacy.html">Политика конфиденциальности</a></li>
+              <li><a href="cookies.html">Cookie Policy</a></li>
+              <li><a href="terms.html">Условия использования</a></li>
+              <li><a href="return.html">Политика возврата</a></li>
+              <li><a href="disclaimer.html">Отказ от ответственности</a></li>
+              <li><a href="personal-data-policy.html">Обработка данных</a></li>
+          </ul>
+      </div>
+
+      <div class="footer__col">
+          <h3 class="footer__title">Контакты</h3>
+          <ul class="footer__contacts">
+              <li>
+                  <i data-lucide="map-pin"></i>
+                  <span>Via Dante Alighieri 24, 20121 Milano, Italy</span>
+              </li>
+              <li>
+                  <i data-lucide="phone"></i>
+                  <a href="tel:+390212345678">+39 02 1234 5678</a>
+              </li>
+              <li>
+                  <i data-lucide="mail"></i>
+                  <a href="mailto:hello@eclip-form.today">hello@eclip-form.today</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer__bottom">
+      <div class="container">
+          <p>&copy; 2025 Eclip-Form. Все права защищены. Платформа уже доступна в Европе.</p>
+      </div>
   </div>
 </footer>
 
-
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script> <script src="script.js"></script>
   </body>
 </html>
